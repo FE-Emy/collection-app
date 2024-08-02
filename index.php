@@ -16,6 +16,9 @@
 <div class="itemsContainer">
 <?php
 require_once 'db.php';
+$query = $db->prepare('SELECT * FROM `exoplanets`');
+$query->execute();
+$exoPlanets = $query->fetchAll();
     foreach ($exoPlanets as $planet) {
         echo '<div class="itemCard">';
         echo '<img src="' . $planet['image_url'] . '" alt="' . $planet['name'] . '">';
@@ -31,7 +34,6 @@ require_once 'db.php';
     }
 ?>
 </div>
-<a href="add_item.php" style="text-decoration: none; color: white;"><div class="addItemButton">Add new Exoplanets</div></a>
-
+<a class='addItemLink' href="add_item.php"><div class="addItemButton">Add new Exoplanets</div></a>
 </body>
 </html>

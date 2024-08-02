@@ -111,6 +111,7 @@ button{
     height: 40px;
     width: 14rem;
     margin-top: 30px;
+    margin-left: 20px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
@@ -177,7 +178,7 @@ button:hover {
     }
 
     button {
-        width: 100%;
+        margin-right: 20px;
         font-size: 14px;
     }
 

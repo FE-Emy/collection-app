@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':distance', $distance);
         $stmt->bindParam(':fact', $fact);
         $stmt->execute();
-        echo "Exoplanet added successfully!";
+        echo "<a class='returnLink' href='index.php'>Exoplanet added successfully!</a>";
     } catch (PDOException $exception) {
         echo 'Error: ' . $exception->getMessage();
     }

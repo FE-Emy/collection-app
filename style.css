@@ -105,6 +105,12 @@ button:hover {
     color: black;
     background-color: lightgray;
 }
+.returnLink {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
 @media (max-width: 768px) {
     body {
         padding:40px;

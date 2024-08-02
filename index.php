@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
@@ -31,8 +31,7 @@ require_once 'db.php';
     }
 ?>
 </div>
-<div class="addItemButton">
-    <a href="add_item.php" style="text-decoration: none; color: white;">Add new Exoplanets</a>
-</div>
+<a href="add_item.php" style="text-decoration: none; color: white;"><div class="addItemButton">Add new Exoplanets</div></a>
+
 </body>
 </html>

@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div>
             <label for="fact">About:</label>
-            <textarea type="text" id="fact" rows="4" cols="20" name="fact"></textarea><br>
+            <textarea type="text" id="fact" rows="5" cols="30" name="fact"></textarea><br>
         </div>
         <div>
             <label for="location">Location:</label>

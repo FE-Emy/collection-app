@@ -16,3 +16,13 @@ Technical Details
 	•	Frontend: Developed using HTML, CSS, and PHP.
 	•	Backend: Connects to an SQL database.
 	•	Database: Stores collections and serves data to the web application.
+
+Live Demo
+
+You can view and interact with the live version of the project here: [Exoplanets App](https://collector-app-4933a67ea673.herokuapp.com/)
+
+Technologies Used
+
+- PHP
+- MySQL
+- Heroku

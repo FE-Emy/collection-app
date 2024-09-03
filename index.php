@@ -21,15 +21,15 @@ $query->execute();
 $exoPlanets = $query->fetchAll();
     foreach ($exoPlanets as $planet) {
         echo '<div class="itemCard">';
-        echo '<img src="' . $planet['image_url'] . '" alt="' . $planet['name'] . '">';
-        echo '<h2>' . $planet['name'] . '</h2>';
+        echo '<img src="' . htmlspecialchars($planet['image_url']) . '" alt="' . htmlspecialchars($planet['name']) . '">';
+        echo '<h2>' . htmlspecialchars($planet['name']) . '</h2>';
         echo '<br>';
-        echo '<p>' . $planet['fact'] . '</p>';
+        echo '<p>' . htmlspecialchars($planet['fact']) . '</p>';
         echo '<br>';
-        echo '<p>Location: ' . $planet['location'] . '</p>';
-        echo '<p>Type: ' . $planet['type'] . '</p>';
-        echo '<p>Orbital period: : ' . $planet['orbital_period'] . '</p>';
-        echo '<p>Distance: ' . $planet['distance'] . '</p>';
+        echo '<p>Location: ' . htmlspecialchars($planet['location']) . '</p>';
+        echo '<p>Type: ' . htmlspecialchars($planet['type']) . '</p>';
+        echo '<p>Orbital period: ' . htmlspecialchars($planet['orbital_period']) . '</p>';
+        echo '<p>Distance: ' . htmlspecialchars($planet['distance']) . '</p>';
         echo '</div>';
     }
 ?>

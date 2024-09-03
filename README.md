@@ -25,4 +25,8 @@ Technologies Used
 
 - PHP
 - MySQL
+- Docker
 - Heroku
+- JawsDB
+- Git
+- PHP Storm

@@ -1,13 +1,20 @@
 <?php
 require_once 'db.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $image_url = $_POST['image_url'];
-    $name = $_POST['name'];
-    $fact = $_POST['fact'];
-    $location = $_POST['location'];
-    $type = $_POST['type'];
-    $orbital_period = $_POST['orbital_period'];
-    $distance = $_POST['distance'];
+    $image_url = filter_var($_POST['image_url'], FILTER_VALIDATE_URL);
+    $name = htmlspecialchars(trim($_POST['name']));
+    $fact = htmlspecialchars(trim($_POST['fact']));
+    $location = htmlspecialchars(trim($_POST['location']));
+    $type = htmlspecialchars(trim($_POST['type']));
+    $orbital_period = htmlspecialchars(trim($_POST['orbital_period']));
+    $distance = htmlspecialchars(trim($_POST['distance']));
+
+    if (!$image_url) {
+        echo "Invalid image URL.";
+        exit;
+    }
+
     try {
         $stmt = $db->prepare("
         INSERT INTO exoplanets (name, image_url, location, type, orbital_period, distance, fact) 
@@ -62,12 +69,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div>
             <label for="orbitalPeriod">Orbital Period:</label>
-            <input type="text" id="orbitalPeriod" name="orbital period" required><br>
+            <input type="text" id="orbitalPeriod" name="orbital_period" required><br> <!-- Nume corectat -->
         </div>
         <div>
             <label for="distance">Distance:</label>
             <input type="text" id="distance" name="distance" required><br>
         </div>
         <button type="submit" name="submit">Add Exoplanet</button>
+    </form>
+</div>
 </body>
 </html>

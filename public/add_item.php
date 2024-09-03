@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':distance', $distance);
         $stmt->bindParam(':fact', $fact);
         $stmt->execute();
-        echo "<a class='returnLink' href='index.php'>Exoplanet added successfully!</a>";
+        echo "<a class='returnLink' href='../index.php'>Exoplanet added successfully!</a>";
     } catch (PDOException $exception) {
         echo 'Error: ' . $exception->getMessage();
     }
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Add Exoplanet</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body class="addItemBody">
 <div class="header">

@@ -34,6 +34,6 @@ $exoPlanets = $query->fetchAll();
     }
 ?>
 </div>
-<a class='addItemLink' href="add_item.php"><div class="addItemButton">Add new Exoplanets</div></a>
+<a class='addItemLink' href="public/add_item.php"><div class="addItemButton">Add new Exoplanets</div></a>
 </body>
 </html>
